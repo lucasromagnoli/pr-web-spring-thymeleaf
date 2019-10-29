@@ -6,8 +6,8 @@
     <version>0.0.1.RC1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Projeto referência - Web, Jpa, Thymeleaf e Spring</name>
-    <description>Projeto base para novos projetos</description>
+    <name>PRWSTJ - [Parent]</name>
+    <description>Projeto referência - Web, Jpa, Thymeleaf e Spring</description>
     <organization>
         <name>Lucas Ramos Romagnoli</name>
         <url>https://www.github.com/lucasromagnoli</url>
@@ -25,5 +25,9 @@
         <!-- Versão do PRWSTJ -->
         <br.com.lucasromagnoli.prwstj.version>0.0.1</br.com.lucasromagnoli.prwstj.version>
 
+		<context-web>/prwstj</context-web>
     </properties>
+    <modules>
+    	<module>prwstj-web</module>
+    </modules>
 </project>
