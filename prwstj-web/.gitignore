@@ -1,3 +1,6 @@
+#Ignore project build
+/target/
+
 # Compiled class file
 *.class
 
@@ -28,3 +31,6 @@ hs_err_pid*
 #Eclipse files
 .settings
 .project
+
+#Ignore Maven files
+.classpath

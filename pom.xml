@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.com.lucasromagnoli</groupId>
+    <artifactId>prwstj</artifactId>
+    <version>0.0.1.RC1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>PRWSTJ - [Parent]</name>
+    <description>Projeto referência - Web, Jpa, Thymeleaf e Spring</description>
+    <organization>
+        <name>Lucas Ramos Romagnoli</name>
+        <url>https://www.github.com/lucasromagnoli</url>
+    </organization>
+
+    <properties>
+        <!-- Versão do compilador Java -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- Encoding padrão para o Maven Compiler Plugin -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- Versão do PRWSTJ -->
+        <br.com.lucasromagnoli.prwstj.version>0.0.1</br.com.lucasromagnoli.prwstj.version>
+
+		<context-web>/prwstj</context-web>
+    </properties>
+    <modules>
+    	<module>prwstj-web</module>
+    </modules>
+</project>
