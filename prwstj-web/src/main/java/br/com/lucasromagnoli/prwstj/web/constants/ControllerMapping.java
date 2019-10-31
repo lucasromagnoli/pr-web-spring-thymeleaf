@@ -8,7 +8,7 @@ public class ControllerMapping {
 	 */
 	private ControllerMapping() {}
 
-	public static final String PATH_HOME_ROOT															= "/home";
-	public static final String VIEW_HOME_INDEX															= "/home/index";
+	public static final String PATH_HOME_ROOT										= "/home";
+	public static final String VIEW_HOME_INDEX										= "/pages/home/index";
 
 }
