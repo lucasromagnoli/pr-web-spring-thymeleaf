@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>PRWSTJ</title>
+	
+	<!-- CSS FILES -->
+</head>
+<body>
+	<!-- Header -->
+	<footer th:replace="/templates/fragments/_layout-master/header :: header"></footer>
+	
+	<!-- Conteúdo -->
+	<div layout:fragment="content"></div>
+	
+	<!-- Footer -->
+	<footer th:replace="/templates/fragments/_layout-master/footer :: footer"></footer>
+	
+	<!-- JAVASCRIPT FILES -->
+	<th:block layout:fragment="self-page-javascripts"></th:block>
+</body>
+</html>
