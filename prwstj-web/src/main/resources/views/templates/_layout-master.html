@@ -8,7 +8,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 	<title>PRWSTJ</title>
 	
-	<!-- CSS FILES -->
+	<!-- Bootstrap  -->
+	<link th:href="@{/resources/vendors/bootstrap-4.3.1-dist/css/bootstrap.min.css}" rel="stylesheet">
 </head>
 <body>
 	<!-- Header -->
@@ -21,6 +22,12 @@
 	<footer th:replace="/templates/fragments/_layout-master/footer :: footer"></footer>
 	
 	<!-- JAVASCRIPT FILES -->
+	<!-- jQuery -->
+	<script th:src="@{/resources/vendors/jquery-3.4.1/jquery-3.4.1.min.js}"></script>
+	<!-- Bootstrap -->
+	<script th:src="@{/resources/vendors/bootstrap-4.3.1-dist/js/bootstrap.min.js}"></script>
+	
+	<!-- Javascript individual das páginas -->
 	<th:block layout:fragment="self-page-javascripts"></th:block>
 </body>
 </html>
