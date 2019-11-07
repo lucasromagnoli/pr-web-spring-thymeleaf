@@ -30,6 +30,12 @@
 		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
 		<thymeleaf.spring5.version>3.0.11.RELEASE</thymeleaf.spring5.version>
 		<thymeleaf.layout.dialect.version>2.4.1</thymeleaf.layout.dialect.version>
+		
+		<!-- Versão do Logging SLF4J-->
+		<log4j.version>2.12.1</log4j.version>
+		
+		<!--  Versão da ponte com o Loggin SLF4J -->
+		<jcl-over-slf4j.version>1.7.28</jcl-over-slf4j.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -51,6 +57,13 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- Thymeleaf -->
@@ -58,6 +71,7 @@
 		  <groupId>org.thymeleaf</groupId>
 		  <artifactId>thymeleaf</artifactId>
 		  <version>${thymeleaf.version}</version>
+		  <scope>compile</scope>
 		</dependency>
 		
 		<!-- Thymeleaf Spring5 -->
@@ -65,6 +79,7 @@
 		  <groupId>org.thymeleaf</groupId>
 		  <artifactId>thymeleaf-spring5</artifactId>
 		  <version>${thymeleaf.spring5.version}</version>
+		  <scope>compile</scope>
 		</dependency>
 
 		<!-- Thymeleaf Layout Dialect -->
@@ -72,6 +87,7 @@
 		  <groupId>nz.net.ultraq.thymeleaf</groupId>
 		  <artifactId>thymeleaf-layout-dialect</artifactId>
 		  <version>${thymeleaf.layout.dialect.version}</version>
+		  <scope>compile</scope>
 		</dependency>
 
 		<!-- Servlet API -->
@@ -81,6 +97,32 @@
 			<version>${servlet.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>jcl-over-slf4j</artifactId>
+		    <version>${jcl-over-slf4j.version}</version>
+		</dependency>
+
 	</dependencies>
 	
 	<profiles>
