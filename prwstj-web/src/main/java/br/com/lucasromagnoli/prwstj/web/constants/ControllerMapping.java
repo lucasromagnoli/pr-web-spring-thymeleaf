@@ -8,17 +8,18 @@ public class ControllerMapping {
 	 */
 	private ControllerMapping() {}
 
-	// Root Paths
-	public static final String PATH_ROOT											= "/";
-	public static final String PATH_HOME_ROOT										= "/home";
-	public static final String PATH_ERRORS_ROOT										= "/errors";
-
-	// Page Paths
-	public static final String PATH_ERRORS_404										= "/404";
-	public static final String PATH_ERRORS_500										= "/500";
-	public static final String PATH_ERRORS_GENERIC_MODULAR							= "/generic";
+	// Web Root Paths
+	public static final String WEB_PATH_ROOT											= "/";
+	public static final String WEB_PATH_HOME_ROOT										= "/home";
+	public static final String WEB_PATH_ERRORS_ROOT										= "/errors";
+	public static final String WEB_PATH_USERS_ROOT										= "/users";
 	
-	// Views
+	// Web Page Paths
+	public static final String WEB_PATH_ERRORS_404										= "/404";
+	public static final String WEB_PATH_ERRORS_500										= "/500";
+	public static final String WEB_PATH_ERRORS_GENERIC_MODULAR							= "/generic";
+	
+	// Web Views
 	public static final String VIEW_HOME_INDEX										= "/pages/home/index";
 	public static final String VIEW_ERRORS_404										= "/pages/errors/404";
 	public static final String VIEW_ERRORS_500										= "/pages/errors/500";

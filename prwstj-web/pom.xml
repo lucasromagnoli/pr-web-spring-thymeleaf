@@ -36,6 +36,12 @@
 		
 		<!--  Versão da ponte com o Loggin SLF4J -->
 		<jcl-over-slf4j.version>1.7.28</jcl-over-slf4j.version>
+		
+		<!-- Versão do Commons Lang3-->
+		<commons-lang3.version>3.9</commons-lang3.version>
+		
+		<!-- Versão do Google Guava-->
+		<guava.version>28.1-jre</guava.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -123,6 +129,19 @@
 		    <version>${jcl-over-slf4j.version}</version>
 		</dependency>
 
+		<!-- Apache Commons Lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+		
+		<!-- Google Guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
 	</dependencies>
 	
 	<profiles>
