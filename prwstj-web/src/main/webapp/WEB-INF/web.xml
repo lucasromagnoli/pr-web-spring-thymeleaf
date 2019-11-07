@@ -3,7 +3,7 @@
 	<display-name>PRWSTJ - Web</display-name>
 	
 	<welcome-file-list>
-		<welcome-file>/dashboard</welcome-file>
+		<welcome-file>/home</welcome-file>
 	</welcome-file-list>
 	
 	<!-- ========================================================== -->

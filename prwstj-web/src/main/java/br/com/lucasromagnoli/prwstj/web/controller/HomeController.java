@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import br.com.lucasromagnoli.prwstj.web.constants.ControllerMapping;
 
 @Controller
-@RequestMapping(ControllerMapping.PATH_HOME_ROOT)
+@RequestMapping({ControllerMapping.PATH_HOME_ROOT, ControllerMapping.PATH_ROOT})
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);

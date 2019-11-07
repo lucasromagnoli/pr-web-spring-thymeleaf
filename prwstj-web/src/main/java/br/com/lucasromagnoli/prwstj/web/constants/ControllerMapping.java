@@ -9,6 +9,7 @@ public class ControllerMapping {
 	private ControllerMapping() {}
 
 	// Root Paths
+	public static final String PATH_ROOT											= "/";
 	public static final String PATH_HOME_ROOT										= "/home";
 	public static final String PATH_ERRORS_ROOT										= "/errors";
 
