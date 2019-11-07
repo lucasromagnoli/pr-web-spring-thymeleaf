@@ -8,7 +8,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import br.com.lucasromagnoli.prwstj.domain.config.init.PrwstjDomainInitializer;
 import br.com.lucasromagnoli.prwstj.web.config.WebConfig;
 
-public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
+public class PrwstjWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
