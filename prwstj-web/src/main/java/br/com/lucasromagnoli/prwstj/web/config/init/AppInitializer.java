@@ -5,13 +5,15 @@ import javax.servlet.Filter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import br.com.lucasromagnoli.prwstj.domain.config.init.PrwstjDomainInitializer;
 import br.com.lucasromagnoli.prwstj.web.config.WebConfig;
 
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return null;
+		Class<?>[] rootConfigClasses = PrwstjDomainInitializer.getRootConfigClasses();
+		return rootConfigClasses;
 	}
 
 	@Override
