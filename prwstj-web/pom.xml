@@ -39,6 +39,9 @@
 		
 		<!-- Versão do Commons Lang3-->
 		<commons-lang3.version>3.9</commons-lang3.version>
+		
+		<!-- Versão do Google Guava-->
+		<guava.version>28.1-jre</guava.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -133,10 +136,11 @@
 			<version>${commons-lang3.version}</version>
 		</dependency>
 		
+		<!-- Google Guava -->
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>28.1-jre</version>
+			<version>${guava.version}</version>
 		</dependency>
 	</dependencies>
 	
