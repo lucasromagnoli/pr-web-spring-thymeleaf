@@ -25,7 +25,6 @@
         <!-- Versão do PRWSTJ -->
         <br.com.lucasromagnoli.prwstj.version>0.0.1.RC1-SNAPSHOT</br.com.lucasromagnoli.prwstj.version>
 
-		<context-web>/prwstj</context-web>
     </properties>
     <modules>
     	<module>prwstj-web</module>
