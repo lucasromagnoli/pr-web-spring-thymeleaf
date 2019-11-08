@@ -29,5 +29,5 @@ hs_err_pid*
 .settings
 .project
 
-#Ignore META-INF 
-META-INF
+#Ignore context.xml (Database configuration)
+context.xml
