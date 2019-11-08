@@ -2,7 +2,6 @@
 > Projeto desenvolvido com intuito de servir como base para projetos futuros.
 
 ## Tecnologias
-
 Projeto conta com as seguintes tecnologias:
 
 * Spring Framework (Core, JPA, JDBC, Data, Security e MVC)
@@ -24,10 +23,15 @@ Projeto conta com as seguintes tecnologias:
 * Camada de apresentação em Spring MVC + Thymeleaf;
 * Novo padrão visual para os projetos Lucas Romagnoli baseado em HTML5, CSS3, Bootstrap, JQuery, entre outros;
 
-## Autores
+## Configuração para Desenvolvimento
+Para que a aplicação funcione corretamente, é necessário a configuração do contexto no Tomcat, onde a aplicação será publicada.
 
+```sh
+jdbc/prwstjDB
+```
+
+## Autores
 * Lucas Ramos Romagnoli | lucasr.romagnoli@gmail.com
 
 ## Copyright
-
 Todos os direitos reservados para Lucas Ramos Romagnoli.
