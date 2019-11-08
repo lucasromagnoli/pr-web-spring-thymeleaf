@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import br.com.lucasromagnoli.prwstj.domain.repository.Users;
 import br.com.lucasromagnoli.prwstj.domain.support.PrwstjPropertiesSupport;
 import br.com.lucasromagnoli.prwstj.web.constants.ControllerMapping;
 
@@ -18,10 +19,14 @@ public class HomeController {
 	@Autowired
 	PrwstjPropertiesSupport propertiesSupport;
 	
+	@Autowired
+	Users users;
+	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@GetMapping
 	public ModelAndView index() {
+		users.findAll();
 		return new ModelAndView(ControllerMapping.VIEW_HOME_INDEX);
 	}
 }
