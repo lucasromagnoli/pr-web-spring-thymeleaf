@@ -6,7 +6,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import br.com.lucasromagnoli.prwstj.domain.config.init.PrwstjDomainInitializer;
-import br.com.lucasromagnoli.prwstj.web.config.WebConfig;
+import br.com.lucasromagnoli.prwstj.web.config.PrwstjWebConfig;
 
 public class PrwstjWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
 
@@ -18,7 +18,7 @@ public class PrwstjWebAppInitializer extends AbstractAnnotationConfigDispatcherS
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class<?>[] { WebConfig.class };
+		return new Class<?>[] { PrwstjWebConfig.class };
 	}
 
 	@Override
