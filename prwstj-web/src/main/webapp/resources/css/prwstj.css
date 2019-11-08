@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+html, body {
+	background: #EEE7EA;
+	font-family: sans-serif;
+	height: 100%;
+	text-rendering: optimizeLegibility !important;
+	-webkit-kit-smoothing: antialiased !important;
+}

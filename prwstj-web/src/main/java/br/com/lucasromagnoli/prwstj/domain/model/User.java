@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "user")
@@ -30,12 +31,16 @@ public class User implements Serializable {
 	@Column(name = "password_hash")
 	private String passwordHash;
 	
+	@Transient
 	private String forgetPasswordToken;
 	
+	@Transient
 	private LocalDateTime forgetPasswordTokenCreatedAt;
 	
+	@Transient
 	private LocalDateTime createdAt;
 	
+	@Transient
 	private LocalDateTime updatedAt;
 	
 	public Long getId() {

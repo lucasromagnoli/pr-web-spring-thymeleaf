@@ -28,3 +28,6 @@ hs_err_pid*
 #Eclipse files
 .settings
 .project
+
+#Ignore context.xml (Database configuration)
+context.xml

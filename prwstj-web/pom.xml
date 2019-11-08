@@ -46,6 +46,9 @@
 		<!-- Versão da ponte com o Loggin SLF4J -->
 		<jcl-over-slf4j.version>1.7.28</jcl-over-slf4j.version>
 		
+		<!-- Versão do Spring Data JPA -->
+		<spring-data-jpa.version>2.2.1.RELEASE</spring-data-jpa.version>
+		
 		<!-- Versão do Commons Lang3-->
 		<commons-lang3.version>3.9</commons-lang3.version>
 		
@@ -163,6 +166,14 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-java8</artifactId>
 			<version>${hibernate.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- Spring Data JPA -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring-data-jpa.version}</version>
 			<scope>compile</scope>
 		</dependency>
 		

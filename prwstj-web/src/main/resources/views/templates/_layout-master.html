@@ -11,14 +11,20 @@
 	
 	<!-- Bootstrap  -->
 	<link th:href="@{/resources/vendors/bootstrap-4.3.1-dist/css/bootstrap.min.css}" rel="stylesheet">
+	<!-- PRWSTJ -->
+	<link th:href="@{/resources/css/prwstj.css}" rel="stylesheet">
+	<!-- _layout-master -->
+	<link th:href="@{/resources/css/_template-master.css}" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column">
 	<!-- Header -->
-	<footer th:replace="/templates/fragments/_layout-master/header :: header"></footer>
+	<nav th:replace="/templates/fragments/_layout-master/header :: header"></nav>
 	
-	<!-- Conteúdo -->
-	<div layout:fragment="content"></div>
-	
+	<div id="page-content">
+		<!-- Conteúdo -->
+		<div layout:fragment="content"></div>
+	</div>
+
 	<!-- Footer -->
 	<footer th:replace="/templates/fragments/_layout-master/footer :: footer"></footer>
 	
