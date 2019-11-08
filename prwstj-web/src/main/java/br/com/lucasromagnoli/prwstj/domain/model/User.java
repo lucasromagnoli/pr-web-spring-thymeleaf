@@ -1,12 +1,42 @@
 package br.com.lucasromagnoli.prwstj.domain.model;
 
-public class User {
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user")
+public class User implements Serializable {
+
+	private static final long serialVersionUID = -7353134010202807214L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Long id;
+	
+	@Column(name = "name")
 	private String name;
+	
+	@Column(name = "email")
 	private String email;
+	
+	@Column(name = "password_hash")
 	private String passwordHash;
+	
 	private String forgetPasswordToken;
+	
+	private LocalDateTime forgetPasswordTokenCreatedAt;
+	
+	private LocalDateTime createdAt;
+	
+	private LocalDateTime updatedAt;
 	
 	public Long getId() {
 		return id;
@@ -46,6 +76,30 @@ public class User {
 	
 	public void setForgetPasswordToken(String forgetPasswordToken) {
 		this.forgetPasswordToken = forgetPasswordToken;
+	}
+	
+	public LocalDateTime getForgetPasswordTokenCreatedAt() {
+		return forgetPasswordTokenCreatedAt;
+	}
+
+	public void setForgetPasswordTokenCreatedAt(LocalDateTime forgetPasswordTokenCreatedAt) {
+		this.forgetPasswordTokenCreatedAt = forgetPasswordTokenCreatedAt;
+	}
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public LocalDateTime getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(LocalDateTime updatedAt) {
+		this.updatedAt = updatedAt;
 	}
 
 	@Override

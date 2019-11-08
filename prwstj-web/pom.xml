@@ -17,6 +17,9 @@
 	</organization>
 	
 	<properties>
+		<!-- Versão do Plugin Flyway Maven -->
+		<flyway-maven-plugin.version>6.0.8</flyway-maven-plugin.version>
+		
 		<!-- Versão do Plugin Maven Compiler -->
 		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
 		
@@ -34,7 +37,13 @@
 		<!-- Versão do Logging SLF4J-->
 		<log4j.version>2.12.1</log4j.version>
 		
-		<!--  Versão da ponte com o Loggin SLF4J -->
+		<!-- Versão do Mysql Connector -->
+		<mysql-connector-java.version>8.0.18</mysql-connector-java.version>
+		
+		<!-- Versão do Hibernate -->
+		<hibernate.version>5.4.8.Final</hibernate.version>
+		
+		<!-- Versão da ponte com o Loggin SLF4J -->
 		<jcl-over-slf4j.version>1.7.28</jcl-over-slf4j.version>
 		
 		<!-- Versão do Commons Lang3-->
@@ -109,31 +118,60 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>${log4j.version}</version>
+			<scope>compile</scope>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 			<version>${log4j.version}</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j-impl</artifactId>
 			<version>${log4j.version}</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 		    <groupId>org.slf4j</groupId>
 		    <artifactId>jcl-over-slf4j</artifactId>
 		    <version>${jcl-over-slf4j.version}</version>
+		    <scope>compile</scope>
 		</dependency>
 
+		<!-- Mysql Connector Java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector-java.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JPA & Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Hibernate - Java 8 support -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-java8</artifactId>
+			<version>${hibernate.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
 		<!-- Apache Commons Lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
+			<scope>compile</scope>
 		</dependency>
 		
 		<!-- Google Guava -->
@@ -141,6 +179,7 @@
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>${guava.version}</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 	
@@ -199,6 +238,17 @@
 	</resources>
 	
 	<plugins>
+		<!-- Plugin Flywaydb -->
+		<plugin>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-maven-plugin</artifactId>
+			<version>${flyway-maven-plugin.version}</version>
+			<configuration>
+				<driver>com.mysql.cj.jdbc.Driver</driver>
+			</configuration>
+		</plugin>
+	
+		<!-- Plugin Maven War Compiler -->
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-war-plugin</artifactId>
@@ -215,6 +265,7 @@
 				</configuration>
 		</plugin>
 			
+		<!-- Plugin Maven Compiler -->
 		<plugin>
 			<artifactId>maven-compiler-plugin</artifactId>
 			<version>${maven.compiler.plugin.version}</version>
