@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
+
 <body>
-    <footer th:fragment="footer">
-    	<span>Footer</span>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50" th:fragment="footer">
+        <div class="container text-center">
+            <small>Copyright &copy; Lucas Romagnoli</small>
+        </div>
     </footer>
 </body>
+
 </html>

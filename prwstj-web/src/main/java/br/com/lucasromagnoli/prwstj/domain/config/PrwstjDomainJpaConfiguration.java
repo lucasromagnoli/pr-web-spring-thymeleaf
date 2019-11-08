@@ -15,10 +15,10 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import br.com.lucasromagnoli.prwstj.domain.model.User;
-import br.com.lucasromagnoli.prwstj.domain.repository.Users;
+import br.com.lucasromagnoli.prwstj.domain.repository.jpa.UsersJpaRepository;
 
 @Configuration
-@EnableJpaRepositories(basePackageClasses = Users.class)
+@EnableJpaRepositories(basePackageClasses = UsersJpaRepository.class)
 public class PrwstjDomainJpaConfiguration {
 
 	@Bean
