@@ -23,7 +23,7 @@ import nz.net.ultraq.thymeleaf.LayoutDialect;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackageClasses = { HomeController.class })
-public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
+public class PrwstjWebConfig implements WebMvcConfigurer, ApplicationContextAware {
 	
 	private ApplicationContext applicationContext;
 	

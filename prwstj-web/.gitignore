@@ -34,3 +34,6 @@ hs_err_pid*
 
 #Ignore Maven files
 .classpath
+
+#Ignore context.xml (Database configuration)
+context.xml
