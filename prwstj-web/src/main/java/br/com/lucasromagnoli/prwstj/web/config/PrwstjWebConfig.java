@@ -60,8 +60,9 @@ public class PrwstjWebConfig implements WebMvcConfigurer, ApplicationContextAwar
 	private ITemplateResolver templateResolver() {
 		SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
 		resolver.setApplicationContext(applicationContext);
-		resolver.setPrefix("classpath:/views");
+		resolver.setPrefix("classpath:/views/");
 		resolver.setSuffix(".html");
+		resolver.setCacheable(false);
 		resolver.setTemplateMode(TemplateMode.HTML);
 		return resolver;
 	}
