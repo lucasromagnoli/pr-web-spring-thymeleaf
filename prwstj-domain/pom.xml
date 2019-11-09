@@ -31,6 +31,9 @@
 		<!-- Versão do Spring Data JPA -->
 		<spring-data-jpa.version>2.2.1.RELEASE</spring-data-jpa.version>
 		
+		<!-- Versão do Lucas Romagnoli Useful Commons -->
+		<useful-commons.version>1.0.0.RC1-SNAPSHOT</useful-commons.version>
+		
 		<!-- Versão do Commons Lang3-->
 		<commons-lang3.version>3.9</commons-lang3.version>
 		
@@ -78,6 +81,13 @@
 			<scope>compile</scope>
 		</dependency>
 		
+		<!-- Lucas Romagnoli Useful Commons -->
+		<dependency>
+			<groupId>br.com.lucasromagnoli</groupId>
+	  		<artifactId>useful-commons</artifactId>
+	  		<version>${useful-commons.version}</version>
+		</dependency>
+  
 		<!-- Apache Commons Lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>

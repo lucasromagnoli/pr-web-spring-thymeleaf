@@ -14,24 +14,28 @@
 			<div class="form-row">
 				<div class="form-group col-12 col-md-6">
 					<label for="name">Nome</label>
-					<input type="text" class="form-control" placeholder="Nome" th:field=*{name}>
+					<input type="text" class="form-control" placeholder="Nome" th:classappend="${#fields.hasErrors('name')} ? is-invalid" th:field=*{name}>
+					<div class="invalid-feedback" th:errors="*{name}"></div>
 				</div>
 
 				<div class="form-group col-12 col-md-6">
 					<label for="email">E-mail</label>
-					<input type="email" class="form-control" placeholder="Email" th:field=*{email}>
+					<input type="email" class="form-control" placeholder="E-mail" th:classappend="${#fields.hasErrors('email')} ? is-invalid" th:field=*{email}>
+					<div class="invalid-feedback" th:errors="*{email}"></div>
 				</div>
 			</div>
 
 			<div class="form-row">
 				<div class="form-group col-12 col-md-6">
 					<label for="password">Senha</label>
-					<input type="password" class="form-control" placeholder="Senha" th:field=*{password}>
+					<input type="password" class="form-control" placeholder="Senha" th:classappend="${#fields.hasErrors('password')} ? is-invalid" th:field=*{password}>
+					<div class="invalid-feedback" th:errors="*{password}"></div>
 				</div>
 
 				<div class="form-group col-12 col-md-6">
 					<label for="passwordConfirm">Confirmar senha</label>
-					<input type="password" class="form-control" placeholder="Confirme" th:field=*{passwordConfirm}>
+					<input type="password" class="form-control" placeholder="Confirme" th:classappend="${#fields.hasErrors('passwordConfirm')} ? is-invalid" th:field=*{passwordConfirm}>
+					<div class="invalid-feedback" th:errors="*{passwordConfirm}"></div>
 				</div>
 			</div>
 
