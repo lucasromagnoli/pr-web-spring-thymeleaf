@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.lucasromagnoli.prwstj.domain.model.User;
+import br.com.lucasromagnoli.prwstj.domain.repository.jpa.UsersJpaRepository;
+import br.com.lucasromagnoli.prwstj.domain.service.UsersService;
 import br.com.lucasromagnoli.prwstj.domain.support.PrwstjPropertiesSupport;
 import br.com.lucasromagnoli.prwstj.domain.validation.UserValidator;
 import br.com.lucasromagnoli.prwstj.web.constants.ControllerMapping;
@@ -24,6 +26,12 @@ public class UsersController {
 	
 	@Autowired
 	PrwstjPropertiesSupport propertiesSupport;
+	
+	@Autowired
+	UsersJpaRepository usersJpaRepository;
+	
+	@Autowired
+	UsersService usersService;
 	
 	Logger logger = LoggerFactory.getLogger(UsersController.class);
 	
@@ -40,9 +48,14 @@ public class UsersController {
 		logger.info(String.format("Tentava de cadastro, dados recebidos: %s", user.toString()));
 		userValidator.validateSignUp(user, result);
 		
-		String x = propertiesSupport.getProperty("validator.input.generic.field.required");
 		if(!result.hasErrors()) {
-			logger.info("Não houve erros");
+			logger.info("As informações foram validadas");
+			try {
+				usersService.save(user);
+				logger.info(String.format("Usuario [%s] registrado no banco", user.getEmail()));
+			} catch (Exception e) {
+				logger.error(String.format("Erro ao cadastrar o usuario: %s", user.toString()));
+			}
 		}
 		
 		return mv;
