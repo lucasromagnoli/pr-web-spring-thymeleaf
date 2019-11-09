@@ -9,7 +9,34 @@
 </head>
 <body>
 	<div layout:fragment="content">
-		<h1>Users!</h1>
+		<form th:action="@{/users/signup}" method="POST" th:object=${user}>
+			<p class="text-center h4">Sign up</p>
+			<div class="form-row">
+				<div class="form-group col-12 col-md-6">
+					<label for="name">Nome</label>
+					<input type="text" class="form-control" placeholder="Nome" th:field=*{name}>
+				</div>
+
+				<div class="form-group col-12 col-md-6">
+					<label for="email">E-mail</label>
+					<input type="email" class="form-control" placeholder="Email" th:field=*{email}>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-12 col-md-6">
+					<label for="password">Senha</label>
+					<input type="password" class="form-control" placeholder="Senha" th:field=*{password}>
+				</div>
+
+				<div class="form-group col-12 col-md-6">
+					<label for="passwordConfirm">Confirmar senha</label>
+					<input type="password" class="form-control" placeholder="Confirme" th:field=*{passwordConfirm}>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary col-12 col-sm-3">Cadastrar</button>
+		</form>
 	</div>
 </body>
 </html>

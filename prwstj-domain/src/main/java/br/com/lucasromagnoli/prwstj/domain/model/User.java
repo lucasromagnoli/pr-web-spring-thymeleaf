@@ -32,6 +32,12 @@ public class User implements Serializable {
 	private String passwordHash;
 	
 	@Transient
+	private String password;
+	
+	@Transient
+	private String passwordConfirm;
+	
+	@Transient
 	private String forgetPasswordToken;
 	
 	@Transient
@@ -105,6 +111,32 @@ public class User implements Serializable {
 
 	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
+
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
+	}
+
+	
+	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", passwordHash=" + passwordHash
+				+ ", password=" + password + ", passwordConfirm=" + passwordConfirm + ", forgetPasswordToken="
+				+ forgetPasswordToken + ", forgetPasswordTokenCreatedAt=" + forgetPasswordTokenCreatedAt
+				+ ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
 	}
 
 	@Override
