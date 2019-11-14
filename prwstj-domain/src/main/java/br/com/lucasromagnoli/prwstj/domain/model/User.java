@@ -13,10 +13,9 @@ import javax.persistence.Transient;
 
 @Entity
 @Table(name = "user")
-public class User implements Serializable {
-
+public class User extends GenericModel implements Serializable {
 	private static final long serialVersionUID = -7353134010202807214L;
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -42,20 +41,14 @@ public class User implements Serializable {
 	
 	@Transient
 	private LocalDateTime forgetPasswordTokenCreatedAt;
-	
-	@Transient
-	private LocalDateTime createdAt;
-	
-	@Transient
-	private LocalDateTime updatedAt;
-	
+			
 	public Long getId() {
 		return id;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
-	}
+	}	
 	
 	public String getName() {
 		return name;
@@ -96,22 +89,6 @@ public class User implements Serializable {
 	public void setForgetPasswordTokenCreatedAt(LocalDateTime forgetPasswordTokenCreatedAt) {
 		this.forgetPasswordTokenCreatedAt = forgetPasswordTokenCreatedAt;
 	}
-
-	public LocalDateTime getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(LocalDateTime createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public LocalDateTime getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(LocalDateTime updatedAt) {
-		this.updatedAt = updatedAt;
-	}
 	
 	public String getPassword() {
 		return password;
@@ -127,16 +104,6 @@ public class User implements Serializable {
 
 	public void setPasswordConfirm(String passwordConfirm) {
 		this.passwordConfirm = passwordConfirm;
-	}
-
-	
-	
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", email=" + email + ", passwordHash=" + passwordHash
-				+ ", password=" + password + ", passwordConfirm=" + passwordConfirm + ", forgetPasswordToken="
-				+ forgetPasswordToken + ", forgetPasswordTokenCreatedAt=" + forgetPasswordTokenCreatedAt
-				+ ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
 	}
 
 	@Override

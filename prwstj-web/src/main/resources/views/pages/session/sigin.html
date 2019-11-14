@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/templates/_layout-master}">
+<head>
+<meta charset="UTF-8">
+<title>PRWSTJ - Home</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<form th:action="@{/session/signin}" method="POST" th:object=${user}>
+<!-- 			<h1 th:text="${messagem}"></h1> -->
+			<p class="text-center h4">Sign in</p>
+			<div class="form-row">
+				<div class="form-group col-12 col-md-6">
+					<label for="name">E-mail</label>
+					<input type="text" class="form-control" placeholder="E-mail" th:field="*{email}">
+				</div>
+
+				<div class="form-group col-12 col-md-6">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" placeholder="Password" th:field="*{password}">
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary col-12 col-sm-3">Entrar</button>
+		</form>
+	</div>
+</body>
+</html>

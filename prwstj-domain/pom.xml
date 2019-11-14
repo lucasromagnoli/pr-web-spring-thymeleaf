@@ -31,6 +31,9 @@
 		<!-- Versão do Spring Data JPA -->
 		<spring-data-jpa.version>2.2.1.RELEASE</spring-data-jpa.version>
 		
+		<!-- Versão do Spring Security -->
+		<spring-security.version>5.2.1.RELEASE</spring-security.version>
+		
 		<!-- Versão do Lucas Romagnoli Useful Commons -->
 		<useful-commons.version>1.0.0.RC1-SNAPSHOT</useful-commons.version>
 		
@@ -81,11 +84,28 @@
 			<scope>compile</scope>
 		</dependency>
 		
+		<!-- Spring Security Web-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring-security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- Spring Security Config-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring-security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
 		<!-- Lucas Romagnoli Useful Commons -->
 		<dependency>
 			<groupId>br.com.lucasromagnoli</groupId>
 	  		<artifactId>useful-commons</artifactId>
 	  		<version>${useful-commons.version}</version>
+	  		<scope>compile</scope>
 		</dependency>
   
 		<!-- Apache Commons Lang3 -->
