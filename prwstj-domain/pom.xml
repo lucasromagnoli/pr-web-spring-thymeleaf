@@ -16,6 +16,9 @@
 	<artifactId>prwstj-domain</artifactId>
 	
 	<properties>
+		<!-- Versão do Plugin Flyway Maven -->
+		<flyway-maven-plugin.version>6.0.8</flyway-maven-plugin.version>
+		
 		<!-- Versão do Plugin Maven Compiler -->
 		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
 		
@@ -127,6 +130,7 @@
 	
 	<build>
 		<plugins>
+			<!-- Plugin Maven Compiler -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven.compiler.plugin.version}</version>
@@ -134,6 +138,16 @@
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
 					<compilerArgument>-proc:none</compilerArgument>
+				</configuration>
+			</plugin>
+			
+			<!-- Plugin Flywaydb -->
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>${flyway-maven-plugin.version}</version>
+				<configuration>
+					<driver>com.mysql.cj.jdbc.Driver</driver>
 				</configuration>
 			</plugin>
 		</plugins>

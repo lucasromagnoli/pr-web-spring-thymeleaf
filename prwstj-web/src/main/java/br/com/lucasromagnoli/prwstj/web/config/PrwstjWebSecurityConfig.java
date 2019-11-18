@@ -1,23 +1,30 @@
 package br.com.lucasromagnoli.prwstj.web.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import br.com.lucasromagnoli.prwstj.web.constants.ControllerMapping;
+import br.com.lucasromagnoli.prwstj.web.security.PrwstjUserDetailsService;
 
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter{
+@ComponentScan(basePackageClasses = PrwstjUserDetailsService.class)
+public class PrwstjWebSecurityConfig extends WebSecurityConfigurerAdapter{
+	
+	@Autowired
+	private UserDetailsService userDetailsService;
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication()
-			.withUser("admin").password("$2y$08$2Q41qS0ZylZToUP2WRMLO.WLRw1nOWKlnyNohn.qyWFz0mmnSDvsO").roles("ADMISNTRADOR_GERAL");
+		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 	}
 	
 	@Override

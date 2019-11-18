@@ -8,14 +8,14 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import br.com.lucasromagnoli.prwstj.domain.config.init.PrwstjDomainInitializer;
 import br.com.lucasromagnoli.prwstj.web.config.PrwstjWebConfig;
-import br.com.lucasromagnoli.prwstj.web.config.SecurityConfig;
+import br.com.lucasromagnoli.prwstj.web.config.PrwstjWebSecurityConfig;
 
 public class PrwstjWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		Class<?>[] rootConfigClasses = PrwstjDomainInitializer.getRootConfigClasses();
-		rootConfigClasses = ArrayUtils.add(rootConfigClasses, SecurityConfig.class);
+		rootConfigClasses = ArrayUtils.add(rootConfigClasses, PrwstjWebSecurityConfig.class);
 		return rootConfigClasses;
 	}
 
@@ -31,11 +31,7 @@ public class PrwstjWebAppInitializer extends AbstractAnnotationConfigDispatcherS
 
 	@Override
 	protected Filter[] getServletFilters() {
-		CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-		characterEncodingFilter.setEncoding("UTF-8");
-		characterEncodingFilter.setForceEncoding(true);
-		
-		return new Filter[] { characterEncodingFilter };
+		return new Filter[] {};
 	}
 	
 }

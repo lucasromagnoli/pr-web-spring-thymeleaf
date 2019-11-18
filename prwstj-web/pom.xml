@@ -16,10 +16,7 @@
 		<url>https://www.github.com/lucasromagnoli</url>
 	</organization>
 	
-	<properties>
-		<!-- Versão do Plugin Flyway Maven -->
-		<flyway-maven-plugin.version>6.0.8</flyway-maven-plugin.version>
-		
+	<properties>		
 		<!-- Versão do Plugin Maven Compiler -->
 		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
 		
@@ -55,7 +52,6 @@
 	</dependencyManagement>
 	
 	<dependencies>
-	
 		<!-- PRWSTJ [Domain] -->
 		<dependency>
 			<groupId>br.com.lucasromagnoli</groupId>
@@ -195,17 +191,7 @@
 		</resource>
 	</resources>
 	
-	<plugins>
-		<!-- Plugin Flywaydb -->
-		<plugin>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-maven-plugin</artifactId>
-			<version>${flyway-maven-plugin.version}</version>
-			<configuration>
-				<driver>com.mysql.cj.jdbc.Driver</driver>
-			</configuration>
-		</plugin>
-	
+	<plugins>	
 		<!-- Plugin Maven War Compiler -->
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>

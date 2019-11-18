@@ -30,6 +30,9 @@ public class User extends GenericModel implements Serializable {
 	@Column(name = "password_hash")
 	private String passwordHash;
 	
+	@Column(name = "active")
+	private boolean active;
+	
 	@Transient
 	private String password;
 	
@@ -104,6 +107,14 @@ public class User extends GenericModel implements Serializable {
 
 	public void setPasswordConfirm(String passwordConfirm) {
 		this.passwordConfirm = passwordConfirm;
+	}
+	
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	@Override
