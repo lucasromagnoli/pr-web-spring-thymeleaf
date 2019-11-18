@@ -22,7 +22,7 @@ public class PrwstjUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		Optional<User> userOptional = usersJpaRepository.findByEmailIgnoreCase(email);
-		User user = userOptional.orElseThrow(() -> new UsernameNotFoundException("Nao achou mano"));
+		User user = userOptional.orElseThrow(() -> new UsernameNotFoundException("E-mail e/ou senha não encontado!"));
 		return new UserSystem(user, new HashSet<>());
 	}
 
