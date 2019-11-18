@@ -1,4 +1,4 @@
-package br.com.lucasromagnoli.prwstj.web.config.init;
+package br.com.lucasromagnoli.prwstj.security.config.init;
 
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;

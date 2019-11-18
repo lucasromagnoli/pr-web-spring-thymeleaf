@@ -3,7 +3,6 @@ package br.com.lucasromagnoli.prwstj.web.config.init;
 import javax.servlet.Filter;
 
 import org.apache.commons.lang3.ArrayUtils;
-import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import br.com.lucasromagnoli.prwstj.domain.config.init.PrwstjDomainInitializer;

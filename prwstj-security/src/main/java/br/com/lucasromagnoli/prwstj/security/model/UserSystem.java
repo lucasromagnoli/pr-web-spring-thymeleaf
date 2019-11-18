@@ -1,4 +1,4 @@
-package br.com.lucasromagnoli.prwstj.web.security;
+package br.com.lucasromagnoli.prwstj.security.model;
 
 import java.util.Collection;
 

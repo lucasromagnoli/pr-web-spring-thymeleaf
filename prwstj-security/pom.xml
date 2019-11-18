@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+	  <groupId>br.com.lucasromagnoli</groupId>
+	  <artifactId>prwstj</artifactId>
+	  <version>0.0.1.RC1-SNAPSHOT</version>
+	</parent>
+	<artifactId>prwstj-security</artifactId>
+	<packaging>jar</packaging>
+  
+  	<name>PRWSTJ - [Security]</name>
+	<description>Projeto referência - Web, Jpa, Thymeleaf e Spring</description>
+	<organization>
+		<name>Lucas Ramos Romagnoli</name>
+		<url>https://www.github.com/lucasromagnoli</url>
+	</organization>
+	
+	<properties>
+		<!-- Versão do Spring Security -->
+		<spring-security.version>5.2.1.RELEASE</spring-security.version>
+		
+		<!-- Versão do Servlet API -->
+		<servlet.version>4.0.1</servlet.version>
+	</properties>
+	
+	<dependencies>
+		<!-- PRWSTJ [Domain] -->
+		<dependency>
+			<groupId>br.com.lucasromagnoli</groupId>
+			<artifactId>prwstj-domain</artifactId>
+			<version>${br.com.lucasromagnoli.prwstj.version}</version>
+		</dependency>
+		
+		<!-- Spring Security Web-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring-security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- Spring Security Config-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring-security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- Servlet API -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	
+	<build>
+	<!-- Plugin Maven Compiler -->
+	<plugins>
+		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>${maven.compiler.plugin.version}</version>
+			<configuration>
+				<source>${maven.compiler.source}</source>
+				<target>${maven.compiler.target}</target>
+			</configuration>
+		</plugin>
+	</plugins>
+	</build>
+</project>

@@ -1,4 +1,4 @@
-package br.com.lucasromagnoli.prwstj.web.security;
+package br.com.lucasromagnoli.prwstj.security.service;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.lucasromagnoli.prwstj.domain.model.User;
 import br.com.lucasromagnoli.prwstj.domain.repository.jpa.UsersJpaRepository;
+import br.com.lucasromagnoli.prwstj.security.model.UserSystem;
 
 @Service
 public class PrwstjUserDetailsService implements UserDetailsService {

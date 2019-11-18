@@ -12,8 +12,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import br.com.lucasromagnoli.prwstj.security.service.PrwstjUserDetailsService;
 import br.com.lucasromagnoli.prwstj.web.constants.ControllerMapping;
-import br.com.lucasromagnoli.prwstj.web.security.PrwstjUserDetailsService;
 
 @EnableWebSecurity
 @ComponentScan(basePackageClasses = PrwstjUserDetailsService.class)
