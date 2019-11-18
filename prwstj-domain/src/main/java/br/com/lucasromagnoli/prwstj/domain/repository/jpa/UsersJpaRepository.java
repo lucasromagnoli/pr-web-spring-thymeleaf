@@ -10,5 +10,5 @@ import br.com.lucasromagnoli.prwstj.domain.model.User;
 @Repository
 public interface UsersJpaRepository extends JpaRepository<User, Long>{
 	public boolean existsUserByEmail(String email);
-	public Optional<User> findByEmailIgnoreCase(String email);
+	public Optional<User> findByEmailIgnoreCaseAndActiveTrue(String email);
 }

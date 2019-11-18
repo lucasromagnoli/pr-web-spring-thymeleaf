@@ -25,7 +25,7 @@ public class PrwstjUserDetailsService implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-		Optional<User> userOptional = usersJpaRepository.findByEmailIgnoreCase(email);
+		Optional<User> userOptional = usersJpaRepository.findByEmailIgnoreCaseAndActiveTrue(email);
 		User user = userOptional.orElseThrow(() -> new UsernameNotFoundException(prwstjPropertiesSupport.getProperty("security.messages.signin.user.notfound")));
 		return new UserSystem(user, new HashSet<>());
 	}
