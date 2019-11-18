@@ -49,10 +49,7 @@ public class PrwstjWebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.and()
 			.csrf().disable();
 			
-			
 	}
-	
-	
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {

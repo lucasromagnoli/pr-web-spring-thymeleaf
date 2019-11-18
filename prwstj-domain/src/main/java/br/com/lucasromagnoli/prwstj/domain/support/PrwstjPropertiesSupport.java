@@ -7,6 +7,7 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 @PropertySource(value = "classpath:/br/com/lucasromagnoli/prwstj/prwstj-messages.properties", encoding = "UTF-8")
+@PropertySource(value = "classpath:/br/com/lucasromagnoli/prwstj/prwstj-security-messages.properties", encoding = "UTF-8")
 public class PrwstjPropertiesSupport {
 
 	@Autowired
