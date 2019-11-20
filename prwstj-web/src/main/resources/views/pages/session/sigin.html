@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorate="~{/templates/_layout-master}">
+	layout:decorate="~{/templates/_layout-master}"
+	xmlns:prwstj="http://lucas.romagnoli.com">
 <head>
 <meta charset="UTF-8">
 <title>PRWSTJ - Home</title>
@@ -10,7 +11,7 @@
 <body>
 	<div layout:fragment="content">
 		<form th:action="@{/session/signin}" method="POST" th:object=${user}>
-<!-- 			<h1 th:text="${messagem}"></h1> -->
+			<prwstj:messages/>
 			<p class="text-center h4">Sign in</p>
 			<div class="form-row">
 				<div class="form-group col-12 col-md-6">
