@@ -23,7 +23,7 @@ public class SessionController {
 	@GetMapping(ControllerMapping.WEB_PATH_SESSION_SIGNIN_FAIL)
 	public ModelAndView showFailureSignIn(RedirectAttributes redirectAttrs) {
 		ModelAndView mv = new ModelAndView(ControllerMapping.WEB_REDIRECT_PATH_SESSION_SIGNIN);
-//		redirectAttrs.addFlashAttribute("messagem", "Erro ao gerar login, favor verificar");
+		redirectAttrs.addFlashAttribute("dangerMessagem", "Erro ao gerar login, favor verificar");
 		
 		return mv;
 	}

@@ -37,3 +37,6 @@ hs_err_pid*
 
 #Ignore context.xml (Database configuration)
 context.xml
+
+#IntelliJ IDEA Files
+.idea
