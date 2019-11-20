@@ -45,9 +45,7 @@ public class PrwstjWebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.defaultSuccessUrl(ControllerMapping.WEB_PATH_ROOT)
 				.failureUrl(ControllerMapping.WEB_ROOT_PATH_SIGNIN_FAIL)
 				.usernameParameter("email")
-				.permitAll()
-				.and()
-			.csrf().disable();
+				.permitAll();
 			
 	}
 	

@@ -19,6 +19,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
 import br.com.lucasromagnoli.prwstj.web.controller.HomeController;
+import br.com.lucasromagnoli.prwstj.web.thymeleaf.processors.PrwstjDialect;
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 
 @Configuration
@@ -48,6 +49,7 @@ public class PrwstjWebConfig implements WebMvcConfigurer, ApplicationContextAwar
 		engine.setTemplateResolver(templateResolver());
 		
 		engine.addDialect(new LayoutDialect());
+		engine.addDialect(new PrwstjDialect());
 		return engine;
 	}
 	

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <div id="prwstj-messages" th:fragment="prwstj-messages">
+		<div th:if="${dangerMessagem}">
+			<div class="alert alert-danger" th:text="${dangerMessagem}"></div>
+		</div>
+		
+		<div th:if="${warningMessagem}">
+			<div class="alert alert-success" th:text="${warningMessagem}"></div>
+		</div>
+		
+		<div th:if="${successMessagem}">
+			<div class="alert alert-success" th:text="${successMessagem}"></div>
+		</div>
+    </div>
+</body>
+
+</html>

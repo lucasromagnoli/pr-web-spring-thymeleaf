@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Transient;
 
-public abstract class GenericModel {
+public abstract class AuditGenericModel {
 
 	@Transient
 	private LocalDateTime createdAt;

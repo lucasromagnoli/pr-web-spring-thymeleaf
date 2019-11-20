@@ -13,7 +13,7 @@ import javax.persistence.Transient;
 
 @Entity
 @Table(name = "user")
-public class User extends GenericModel implements Serializable {
+public class User extends AuditGenericModel implements Serializable {
 	private static final long serialVersionUID = -7353134010202807214L;
 	
 	@Id
