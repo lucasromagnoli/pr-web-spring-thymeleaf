@@ -38,7 +38,7 @@ public class UsersController {
 	@GetMapping(ControllerMapping.WEB_PATH_USERS_SIGNUP)
 	public ModelAndView showSignUp(User user) {
 		ModelAndView mv = new ModelAndView(ControllerMapping.VIEW_USERS_SIGNUP);
-		
+
 		return mv;
 	}
 	
@@ -47,7 +47,7 @@ public class UsersController {
 		ModelAndView mv = new ModelAndView(ControllerMapping.VIEW_USERS_SIGNUP);
 		logger.info(String.format("Tentava de cadastro, dados recebidos: %s", user.toString()));
 		userValidator.validateSignUp(user, result);
-		
+
 		if(!result.hasErrors()) {
 			logger.info("As informações foram validadas");
 			try {
@@ -58,6 +58,13 @@ public class UsersController {
 			}
 		}
 		
+		return mv;
+	}
+
+	@GetMapping(ControllerMapping.WEB_PATH_USERS_LIST)
+	public ModelAndView showList(User user) {
+		ModelAndView mv = new ModelAndView(ControllerMapping.VIEW_USERS_LIST);
+
 		return mv;
 	}
 }
