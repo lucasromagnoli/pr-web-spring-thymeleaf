@@ -39,7 +39,7 @@
 		<commons-lang3.version>3.9</commons-lang3.version>
 		
 		<!-- Versão do Google Guava-->
-		<guava.version>28.1-jre</guava.version>
+		<guava.version>29.0-jre</guava.version>
 	</properties>
 	
 	<dependencyManagement>
