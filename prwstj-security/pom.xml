@@ -18,7 +18,7 @@
 	
 	<properties>
 		<!-- Versão do Spring Security -->
-		<spring-security.version>5.2.1.RELEASE</spring-security.version>
+		<spring-security.version>5.2.10.RELEASE</spring-security.version>
 		
 		<!-- Versão do Servlet API -->
 		<servlet.version>4.0.1</servlet.version>
