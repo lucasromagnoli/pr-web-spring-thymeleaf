@@ -24,7 +24,7 @@
 		<spring-framework.version>5.2.0.RELEASE</spring-framework.version>
 		
 		<!-- Versão do Mysql Connector -->
-		<mysql-connector-java.version>8.0.18</mysql-connector-java.version>
+		<mysql-connector-java.version>8.0.28</mysql-connector-java.version>
 		
 		<!-- Versão do Hibernate -->
 		<hibernate.version>5.4.8.Final</hibernate.version>
